@@ -1,12 +1,14 @@
 import React from 'react'
-import './App.css';
-import Samplecard from './components/samplecard';
+import './styles/App.css';
+import SignUp from './components/SignUp';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (
-    <div className="App">
-      Dumb Bitch Ishani    
-      <Samplecard/>    
+    <div>
+      <AuthProvider>
+        <SignUp />
+      </AuthProvider>
     </div>
   );
 }
